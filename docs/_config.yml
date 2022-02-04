@@ -30,7 +30,11 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+<<<<<<< HEAD
 theme: hacker
+=======
+theme: jekyll-theme-hacker
+>>>>>>> b6cad4026c141ffe8e6d12caab5589d2ba9165a6
 plugins:
   - jekyll-feed
 
