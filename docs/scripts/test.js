@@ -1,6 +1,6 @@
 const myHeading = document.querySelector('h1');
 console.log(myHeading);
-async function getTextFromStream(readableStream) {
+/*async function getTextFromStream(readableStream) {
     let reader = readableStream.getReader();
     let utf8Decoder = new TextDecoder();
     let nextChunk;
@@ -13,13 +13,13 @@ async function getTextFromStream(readableStream) {
     }
     
     return resultStr;
-}
+}*/
 
 async function getCSV() {
     const requestURL = 'https://github.com/Kolsemi/dictionary/blob/main/dictionary.csv';
     const request = new Request(requestURL);
     const response = await fetch(request, {mode: 'no-cors', headers: {'Content-Type': 'text/plain'}});
-    let responseText = await getTextFromStream(response.body)
+    let responseText = await response.text()
     document.getElementById('result').innerHTML = responseText;
 }
 
