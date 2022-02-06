@@ -19,6 +19,7 @@ async function getCSV() {
     const requestURL = 'https://github.com/Kolsemi/dictionary/blob/main/dictionary.txt';
     const request = new Request(requestURL);
     const response = await fetch(request, {mode: 'no-cors', headers: {'Content-Type': 'text/plain'}});
+    console.log(response)
     let responseText = await response.text()
     document.getElementById('result').innerHTML = responseText;
 }
