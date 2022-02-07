@@ -14,7 +14,8 @@ console.log(myHeading);
     
     return resultStr;
 }*/
-myArticle = document.getElementById('
+myArticle = document.getElementById('result');
+console.log(myArticle);
 function getData() {
     var myRequest = new Request('https://github.com/Kolsemi/dictionary/blob/main/dictionary.txt');
     fetch(myRequest, {mode: 'no-cors'}).then(function(response) {
@@ -23,4 +24,4 @@ function getData() {
     });
   });
 }
-
+getData();
