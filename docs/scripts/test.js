@@ -14,13 +14,13 @@ console.log(myHeading);
     
     return resultStr;
 }*/
-
-async function getCSV() {
-    const requestURL = 'https://github.com/Kolsemi/dictionary/blob/main/dictionary.txt';
-    const request = new Request(requestURL);
-    const response = await fetch(request, {mode: 'no-cors', headers: {'Content-Type': 'text/plain'}});
-    console.log(response)
-    let responseText = await response.text()
-    document.getElementById('result').innerHTML = responseText;
+myArticle = document.getElementById('
+function getData() {
+    var myRequest = new Request('https://github.com/Kolsemi/dictionary/blob/main/dictionary.txt');
+    fetch(myRequest, {mode: 'no-cors'}).then(function(response) {
+    return response.text().then(function(text) {
+      myArticle.innerHTML = text;
+    });
+  });
 }
 
